@@ -222,7 +222,7 @@ while (check) {                  // BUBBLESORT PARA LINKEDLIST --> TARDE 2 DIAS 
         let first = sentinel.next;                   //    S -->
         let second = sentinel.next.next;
         if (first.value < second.value) { 
-            sentinel.next = second;
+            sentinel.next = second; 
             first.next = second.next;
             second.next = first;
             check = true;
@@ -421,8 +421,8 @@ if (list.length < 2) {
 }  else {
    
 const pivote = list[0]
-const menores = list.filter((value) => value < pivote)
-const mayores = list.filter((value) => value > pivote)
+const menores = list.filter(function(value) { value < pivote})
+const mayores = list.filter(function(value) { value > pivote})
 
  arr.push(quickSort(menores));
  arr.push(pivote);
